@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="utf-8">
+        <title>Adding vector graphics to the Web</title>
+        <style>
+            p{
+                background: url("fallback.png") repeat center;
+                background-image: url("svg/icon.svg");
+                background-size: contain;
+            }
+        </style>
+    </head>
+    <body>
+        <svg version="1.1" baseProfile="full" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100%" height="100%" fill="black"></rect>
+            <circle cx="150" cy="100" r="90" fill="blue"></circle>
+        </svg>
+
+        <img src="svg/icon.svg" alt="a small yellow star" height="87" width="100">
+
+        <p> yellow </p>
+        <img src=".jpg" alt="a small yellow star" srcset="svg/icon.svg" height="87" width="100˜">
+
+        <svg width="300" height="200">
+            <rect width="100%" height="100%" fill="green"></rect>
+        </svg>
+
+        <iframe src="svg/icon.svg" width="500" height="500" sandbox>
+            <img src="png" alt="a small yellow star">
+        </iframe>
+
+        <svg width="100%" height="100%">
+            <rect width="100%" height="100%" fill="red"></rect>
+            <circle cx="50%" cy="50%" r="150" fill="blue"></circle>
+            <polygon points="120,0 240,225 0,225" fill="green"></polygon>
+            <text x="50" y="100" font-family="Verdana" font-size="55" fill="white" stroke="black" stroke-width="2"> hello! </text>
+        </svg>
+    <footer>
+        Icon made by Pixel perfect from www.flaticon.com
+    </footer>
+    </body>
+</html>
